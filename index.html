@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Form Langsir Online JAKK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar no-print">
+    <div><span class="eyebrow">OPERASIONAL LANGSIR</span><h1>Form Langsir Online JAKK</h1></div>
+    <span class="station">STASIUN JAKARTA KOTA</span>
+  </header>
+
+  <main class="workspace">
+    <aside class="control-panel no-print">
+      <h2>Buat Perintah</h2>
+      <div class="tabs" id="typeTabs">
+        <button data-type="type1" class="active">Type 1</button>
+        <button data-type="type2">Type 2</button>
+        <button data-type="type3">Type 3</button>
+        <button data-type="type4">Type 4</button>
+      </div>
+
+      <div class="form-grid base-fields">
+        <label>Nomor order<input id="orderNumber" inputmode="numeric" maxlength="3" placeholder="001"></label>
+        <label>Nomor pergerakan<input id="movementNumber" value="26" placeholder="26"></label>
+        <label>Tanggal<input id="orderDate" type="date"></label>
+        <label>Jam mulai<input id="startTime" type="time"></label>
+        <label>Jam selesai<input id="endTime" type="time"></label>
+      </div>
+      <div id="routeControls" class="form-grid route-controls"></div>
+      <p class="hint">Database sinyal, wesel, dan koordinat garis berada di <b>database.js</b>.</p>
+    </aside>
+
+    <section class="paper" id="printArea">
+      <div class="paper-head">
+        <div><span>FORM PERINTAH LANGSIR</span><h2>STASIUN JAKARTA KOTA</h2><p id="typeTitle"></p></div>
+        <div class="order-box"><small>NOMOR PERINTAH</small><strong id="fullOrder">001/IX/JAKK/2026</strong></div>
+      </div>
+
+      <div class="meta-grid">
+        <div><small>Nomor pergerakan</small><b id="metaMovement">26</b></div>
+        <div><small>Tanggal</small><b id="metaDate">-</b></div>
+        <div><small>Jam mulai</small><b id="metaStart">-</b></div>
+        <div><small>Jam selesai</small><b id="metaEnd">-</b></div>
+      </div>
+
+      <div id="stageList" class="stage-list"></div>
+
+      <section class="map-card">
+        <div class="map-head">
+          <div><b>DENAH EMPLASEMEN JAKARTA KOTA–DAO</b><small>Denah referensi ditampilkan tanpa arsiran rute.</small></div>
+        </div>
+        <div class="map-wrap">
+          <img src="emplasemen-jakk-dao.webp" alt="Denah emplasemen Jakarta Kota dan DAO">
+        </div>
+      </section>
+
+      <section class="signatures">
+        <h3>PENERIMAAN PERINTAH</h3>
+        <div class="group-head"><span>YANG MENERIMA PERINTAH</span><span>YANG MEMERINTAH</span></div>
+        <div class="signature-grid">
+          <div class="signature-card" data-role="pukpus"><b>PUK/PUS</b><canvas></canvas><input placeholder="Nama"><input placeholder="NIPP"></div>
+          <div class="signature-card" data-role="masinis"><b>MASINIS</b><canvas></canvas><input placeholder="Nama"><input placeholder="NIPP"></div>
+          <div class="signature-card" data-role="plr"><b>PLR</b><canvas></canvas><input placeholder="Nama"><input placeholder="NIPP"></div>
+          <div class="signature-card" data-role="ppkapap"><b>PPKA/PAP</b><canvas></canvas><input placeholder="Nama"><input placeholder="NIPP"></div>
+        </div>
+      </section>
+
+      <div class="actions no-print"><button id="clearSign">Hapus Tanda Tangan</button><button id="printButton" class="primary">Cetak A4</button></div>
+    </section>
+    <section id="printPair" class="print-pair" aria-label="Dua salinan Form Perintah Langsir"></section>
+  </main>
+
+  <script src="database.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

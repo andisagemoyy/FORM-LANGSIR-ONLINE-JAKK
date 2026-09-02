@@ -1,0 +1,17 @@
+FORM LANGSIR ONLINE JAKK - VERSI HTML/CSS/JS
+
+Cara menjalankan:
+1. Ekstrak seluruh isi ZIP ke satu folder.
+2. Klik dua kali index.html untuk membukanya di Chrome atau Edge.
+3. Jangan memisahkan file gambar, CSS, database, atau JavaScript dari folder.
+
+Susunan file:
+- index.html                 : struktur halaman
+- style.css                  : tampilan dan aturan cetak dua formulir pada satu A4 landscape
+- database.js               : data jalur, sinyal, wesel, dan empat tipe langsiran
+- script.js                 : logika pilihan rute, form, tanda tangan, dan cetak
+- emplasemen-jakk-dao.webp  : gambar denah JAKK dan DAO
+
+Gambar emplasemen ditampilkan sebagai referensi tanpa arsiran rute.
+Untuk mengoreksi data rute, edit database.js.
+Gunakan data yang telah diperiksa petugas berwenang sebelum form dipakai secara operasional.
