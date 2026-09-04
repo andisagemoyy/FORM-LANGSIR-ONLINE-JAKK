@@ -1,0 +1,27 @@
+FORM LANGSIR ONLINE JAKK - VERSI HTML/CSS/JS
+
+Cara menjalankan:
+1. Ekstrak seluruh isi ZIP ke satu folder.
+2. Klik dua kali index.html untuk membukanya di Chrome atau Edge.
+3. Jangan memisahkan file gambar, CSS, database, atau JavaScript dari folder.
+
+Susunan file:
+- index.html                 : struktur halaman
+- style.css                  : tampilan dan aturan cetak dua formulir pada satu A4 landscape
+- database.js               : data jalur, sinyal, wesel, dan empat tipe langsiran
+- script.js                 : logika pilihan rute, form, tanda tangan, cetak, riwayat, dan rekap harian
+- emplasemen-jakk-dao.webp  : gambar denah JAKK dan DAO
+- logo-kai.svg              : logo header, favicon, dan logo cetak
+
+Riwayat dan rekap harian:
+1. Buat order seperti biasa, kemudian tekan Simpan Order.
+2. Order disimpan pada browser perangkat dan dikelompokkan berdasarkan tanggal form.
+3. Nomor order yang sama pada tanggal yang sama tidak dapat disimpan dua kali.
+4. Setelah berhasil disimpan, nomor order otomatis bertambah satu.
+5. Tekan Download Rekap Harian untuk menghasilkan file CSV yang dapat dibuka di Excel.
+6. Nama file mengikuti tanggal, contoh REKAP_ORDER_LANGSIR_02-09-2026.csv.
+7. Unduh rekap setiap hari karena riwayat lokal dapat hilang jika data browser dibersihkan.
+
+Gambar emplasemen ditampilkan sebagai referensi tanpa arsiran rute.
+Untuk mengoreksi data rute, edit database.js.
+Gunakan data yang telah diperiksa petugas berwenang sebelum form dipakai secara operasional.
